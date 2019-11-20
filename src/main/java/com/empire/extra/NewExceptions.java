@@ -51,7 +51,7 @@ public class NewExceptions {
 			myFunc(c);
 		}
 		catch (Throwable e) {
-			log.error("Error occured", e);
+			// log.error("Error occurred", e);
 		}
 		log.info("Completed generating {}", message);
 	}

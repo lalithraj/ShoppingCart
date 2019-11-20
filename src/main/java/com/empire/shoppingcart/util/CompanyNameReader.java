@@ -33,7 +33,7 @@ public class CompanyNameReader {
 			properties = new Properties();
 			properties.load(inputStream);
 		} catch (Exception e) {
-			log.error("An exception occured: {}", e);
+			// log.error("An exception occurred: {}", e);
 		}
 		finally {
 			try {
@@ -41,7 +41,7 @@ public class CompanyNameReader {
 					inputStream.close();
 				}
 			} catch (Exception e) {
-				log.error("An exception occured {}", e.getMessage());
+				// log.error("An exception occurred {}", e.getMessage());
 			}
 		}
 	}

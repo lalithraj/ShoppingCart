@@ -179,7 +179,7 @@ public class DataGenerator {
 		try {
 			customer.setDob(format.parse(dateString));
 		} catch (ParseException e) {
-			log.error("Unable to parse date", e);
+			// log.error("Unable to parse date", e);
 		}
 		
 		log.info("Complete - lets return customer");

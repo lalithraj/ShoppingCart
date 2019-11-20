@@ -32,7 +32,7 @@ public class DataTypeGenerator {
 	public static String getRandomDataType(String key, int randomNumber) {
 		List<String> valueList = dataTypePropertiesMap.get(key);
 		if (valueList == null) {
-			log.error("Data Type is null");
+			// log.error("Data Type is null");
 			throw new ShoppingCartException("Could not find dataMapping for key: " + key);
 		}
 		return valueList.get(randomNumber);

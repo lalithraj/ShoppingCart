@@ -35,14 +35,14 @@ public class AmazonUtils {
 				socket.connect(new InetSocketAddress(ipAddress, port), 10000);
 				log.info("Connection Successfull");
 			} catch (IOException e) {
-				log.error("IO socket timeout exception", e);
+				// log.error("IO socket timeout exception", e);
 			} finally {
 				try {
 					if (socket != null) {
 						socket.close();
 					}
 				} catch (IOException e) {
-					log.error("IO socket close exception", e);
+					// log.error("IO socket close exception", e);
 				}
 			}
 		}

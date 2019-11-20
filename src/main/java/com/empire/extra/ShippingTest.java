@@ -30,7 +30,7 @@ public class ShippingTest {
 			process(customer, order, shipmentDetails, shipNumber, c);
 		}
 		catch (Throwable e) {
-			log.error("Error occured processing order", e);
+			// log.error("Error occurred processing order", e);
 		}
 		log.info("Completed processing shipment {}", order.getOrderNumber());
 	}

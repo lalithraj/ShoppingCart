@@ -34,8 +34,8 @@ public class ShoppingCartPropertyReader {
 			log.info("Now lets load the properties");
 			prop.load(inStream);
 		} catch (Exception e) {
-			log.error("Exception in thread: {}", e);
-			log.error(e.getMessage());
+			// log.error("Exception in thread: {}", e);
+			// log.error(e.getMessage());
 		}
 		finally {
 			try {
@@ -44,7 +44,7 @@ public class ShoppingCartPropertyReader {
 					inStream.close();
 				}
 			} catch (Exception e) {
-				log.error("An error occured: {}", e.getMessage());
+				// log.error("An error occurred: {}", e.getMessage());
 			}
 		}
 	}

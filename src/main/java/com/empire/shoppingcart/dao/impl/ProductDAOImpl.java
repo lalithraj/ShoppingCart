@@ -48,7 +48,7 @@ public class ProductDAOImpl implements ProductDAO {
 			if (success)
 				return product;
 		} catch (SQLException e) {
-			log.error("SQL Exception while updating product: {}", e.getMessage());
+			// log.error("SQL Exception while updating product: {}", e.getMessage());
 		}
 		return null;
 	}

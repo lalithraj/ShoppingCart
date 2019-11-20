@@ -30,7 +30,7 @@ public class CustomerTest {
 			customerDAO = new CustomerDAOImpl();
 			customer = customerDAO.create("CUSTTEST3000");
 		} catch (Exception e) {
-			log.error("Could not create customer");
+			// log.error("Could not create customer");
 		}
 	}
 

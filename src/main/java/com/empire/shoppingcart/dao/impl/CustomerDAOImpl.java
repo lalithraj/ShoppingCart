@@ -28,7 +28,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			log.info("Found the customer: {}", customer.getAccountNumber());
 			return customer;
 		} catch (Exception e) {
-			log.error("Unable to get customer - getByCustomerNumber: {}", customerNumber);
+			// log.error("Unable to get customer - getByCustomerNumber: {}", customerNumber);
 			throw new ShoppingCartException(e);
 		}
 	}
@@ -41,7 +41,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			log.info("Found the customer: {}", customer.getAccountNumber());
 			return customer;
 		} catch (Exception e) {
-			log.error("Unable to get customer - getByCustomerNumber: {}", customerNumber);
+			// log.error("Unable to get customer - getByCustomerNumber: {}", customerNumber);
 			throw new ShoppingCartException(e);
 		}
 	}
@@ -53,7 +53,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			log.info("Completed creating the customer with CustomerNumber {}", customerNumber);
             return customer;
 		} catch (Exception e) {
-			log.error("Unable to create customer using customerNumber: {}", customerNumber, e);
+			// log.error("Unable to create customer using customerNumber: {}", customerNumber, e);
 		}
 		throw new ShoppingCartException("Unable to create customer with CustomerNumber " + customerNumber);
 	}
@@ -64,7 +64,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			log.info("Creating a customer");
 			return dataGenerator.createCustomer1();
 		} catch (Exception e) {
-			log.error("Unable to create customer", e);
+			// log.error("Unable to create customer", e);
 		}
 		throw new ShoppingCartException("Unable to create customer");
 	}

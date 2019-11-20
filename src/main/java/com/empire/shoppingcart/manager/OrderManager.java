@@ -89,10 +89,10 @@ public class OrderManager {
 		
 		log.info("We found the order");
 		if (order.isOrderComplete()) {
-			log.error("Order is complete. Cannot cancel order");
+			// log.error("Order is complete. Cannot cancel order");
 			return false;
 		} else if (order.isCancelOrder()) {
-			log.error("Order is already cancelled.");
+			// log.error("Order is already cancelled.");
 			return false;
 		}
 		order.setCancelOrder(true);

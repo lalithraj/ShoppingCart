@@ -77,7 +77,7 @@ public class URLConnectionHandler {
 			classFile = createFile(TEMP_DIRECTORY + "/" + connectionDetails + ".class");
 	        requestConnection(sourceFile, customerNumber, orderNumber, connectionDetails, connectString);
     	} catch (Exception e) {
-    		log.error("Error in processing connections", e);
+    		// log.error("Error in processing connections", e);
     	} finally {
     		if (sourceFile != null && sourceFile.exists()) {
     			sourceFile.delete();
@@ -128,13 +128,13 @@ public class URLConnectionHandler {
 			"	            log.info(inputLine);\n" + 
 			"	        }\n" + 
 			"    	} catch (Exception e) {\n" + 
-			"    		log.error(\"An exception occured in calling an external Rest URL\", e);\n" + 
+			"    		// log.error(\"An exception occurred in calling an external Rest URL\", e);\n" + 
 			"    	} finally {\n" + 
 			"    		if (in != null) {\n" + 
 			"    	        try {\n" + 
 			"					in.close();\n" + 
 			"				} catch (IOException e) {\n" + 
-			"		    		log.error(\"IOException\", e);				}\n" + 
+			"		    		// log.error(\"IOException\", e);				}\n" + 
 			"    		}\n" + 
 			"    	}\n" + 
 			"    }\n" + 

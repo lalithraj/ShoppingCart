@@ -55,7 +55,7 @@ public class ShoppingCartTaskExecutor {
 		try {
 			threadPool.awaitTermination(timeout, unit);
 		} catch (InterruptedException e) {
-			log.error("An exception occured {}", e.getMessage());
+			// log.error("An exception occured {}", e.getMessage());
 		    Thread.currentThread().interrupt();
 		}
 	}

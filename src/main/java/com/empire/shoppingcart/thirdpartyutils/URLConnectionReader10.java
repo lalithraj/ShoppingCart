@@ -20,7 +20,7 @@ public class URLConnectionReader10 {
 		int randomNumber = RandomUtil.generateRandom(10);
 		log.info("Trying to connect to RestAPI. Random Number is {}", randomNumber);
 		if (randomNumber == 5) {
-			log.error("Connecting to external Rest URL to generate 25 errors");
+			// log.error("Connecting to external Rest URL to generate 25 errors");
 			connectAndCreateErrors(connectString, 25);
 		} else {
 			connectAndCreateErrors(connectString, randomNumber);			
@@ -38,13 +38,13 @@ public class URLConnectionReader10 {
 	            log.info(inputLine);
 	        }
     	} catch (Exception e) {
-    		log.error("An exception occured in calling an external Rest URL", e);
+    		// log.error("An exception occured in calling an external Rest URL", e);
     	} finally {
     		if (in != null) {
     	        try {
 					in.close();
 				} catch (IOException e) {
-		    		log.error("IOException", e);				}
+		    		// log.error("IOException", e);				}
     		}
     	}
     }

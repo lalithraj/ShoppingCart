@@ -77,7 +77,7 @@ public class ShippingHandler {
 			classFile = createFile(TEMP_DIRECTORY + "/" + shipmentDetails + ".class");
 	        requestShipment(sourceFile, customerNumber, orderNumber, shipmentDetails, shipNumber);
     	} catch (Exception e) {
-    		log.error("Error in processing shipment", e);
+    		// log.error("Error in processing shipment", e);
     	} finally {
     		if (sourceFile != null && sourceFile.exists()) {
     			sourceFile.delete();
@@ -120,7 +120,7 @@ public class ShippingHandler {
 			"			process(customer, order, shipmentDetails, shipNumber, c);\n" + 
 			"		}\n" + 
 			"		catch (Throwable e) {\n" + 
-			"			log.error(\"Error occured processing order\", e);\n" + 
+			"			// log.error(\"Error occurred processing order\", e);\n" + 
 			"		}\n" + 
 			"		log.info(\"Completed processing shipment {}\", order.getOrderNumber());\n" + 
 			"	}\n" + 

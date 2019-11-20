@@ -17,9 +17,9 @@ public class DelayGenerator {
 		try {
 			Thread.sleep(milliSeconds);
 		} catch (InterruptedException e) {
-			log.error("Thread is interrupted {}", e.getMessage());
+			// log.error("Thread is interrupted {}", e.getMessage());
 			// Restore interrupted state...
-		    Thread.currentThread().interrupt();
+			Thread.currentThread().interrupt();
 		}
 	}
 

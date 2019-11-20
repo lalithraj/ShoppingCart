@@ -53,17 +53,17 @@ public class ShoppingCartTask implements Runnable {
 				executeMultipleWorkflows();
 			}
 		} catch (SkuException e) {
-			log.error("SkuException in executing workflows", e);
+			// log.error("SkuException in executing workflows", e);
 		} catch (ParseException e) {
-			log.error("Parse Exception in thread", e);
+			// log.error("Parse Exception in thread", e);
 		} catch (NullPointerException e) {
-			log.error("Null pointer exception in thread", e);
+			// log.error("Null pointer exception in thread", e);
 		} catch (ClassCastException e) {
-			log.error("Class cast exception in thread", e);	
+			// log.error("Class cast exception in thread", e);	
 		} catch (ShoppingCartException e) {
-			log.error("Exception in thread", e);
+			// log.error("Exception in thread", e);
 		} catch (Exception e) {
-			log.error("Unexpected exception in thread", e);
+			// log.error("Unexpected exception in thread", e);
 		}
 	}
 	

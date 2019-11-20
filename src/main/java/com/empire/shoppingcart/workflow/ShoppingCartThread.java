@@ -48,7 +48,7 @@ public class ShoppingCartThread implements Callable<Object> {
 				letsWaitForXXseconds();
 
 			} catch (Exception e) {
-				log.error("Exception in executing workflows {}", e.getMessage());
+				// log.error("Exception in executing workflows {}", e.getMessage());
 			} finally {
 				count++;
 				//handleFuture(future);
@@ -77,9 +77,9 @@ public class ShoppingCartThread implements Callable<Object> {
 					log.info("Waiting for the executor to complete ...");
 					future.get();
 				} catch (java.util.concurrent.ExecutionException e) {
-					log.error("Exception in thread: {}", e);
+					// log.error("Exception in thread: {}", e);
 				} catch (Exception e) {
-					log.error("Exception in thread: {}", e);
+					// log.error("Exception in thread: {}", e);
 					throw new ShoppingCartException(e);
 				}
 				break;
@@ -95,9 +95,9 @@ public class ShoppingCartThread implements Callable<Object> {
 					log.info("Waiting for the executor to complete ...");
 					f.get();
 				} catch (java.util.concurrent.ExecutionException e) {
-					log.error("Exception in thread: {}", e);
+					// log.error("Exception in thread: {}", e);
 				} catch (Exception e) {
-					log.error("Exception in thread: {}", e);
+					// log.error("Exception in thread: {}", e);
 					throw new ShoppingCartException(e);
 				}
 				break;

@@ -28,7 +28,7 @@ public class SkuTest {
 			skuDAO = new SkuDAOImpl();
 			sku = skuDAO.create("SKUTEST4000");
 		} catch (Exception e) {
-			log.error("Could not create Skew");
+			// log.error("Could not create Skew");
 		}
 	}
 

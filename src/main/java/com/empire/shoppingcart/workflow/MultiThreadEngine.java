@@ -74,7 +74,7 @@ public class MultiThreadEngine {
 			log.info("Waiting for the executor to complete ...");
 			executor.awaitTermination(10, TimeUnit.MINUTES);
 		} catch (InterruptedException e) {
-			log.error("Error occured: {}", e);
+			// log.error("Error occured: {}", e);
 		    Thread.currentThread().interrupt();
 		}
 		executor.shutdownNow();
@@ -89,9 +89,9 @@ public class MultiThreadEngine {
 					log.info("Waiting for the executor to complete ...");
 					future.get();
 				} catch (java.util.concurrent.ExecutionException e) {
-					log.error("Exception in thread: {}", e);
+					// log.error("Exception in thread: {}", e);
 				} catch (Exception e) {
-					log.error("Exception in thread: {}", e);
+					// log.error("Exception in thread: {}", e);
 					throw new ShoppingCartException(e);
 				}
 				break;

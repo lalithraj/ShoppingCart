@@ -44,7 +44,8 @@ public class URLConnectionReader10 {
     	        try {
 					in.close();
 				} catch (IOException e) {
-		    		// log.error("IOException", e);				}
+		    		// log.error("IOException", e);
+        }
     		}
     	}
     }

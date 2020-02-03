@@ -12,6 +12,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!-- <sonar.buildString>101</sonar.buildString> -->
+        <overops.application.name>shopping-cart-tests</overops.application.name>
+        <overops.deployment.name>test</overops.deployment.name>
     </properties>
 
     <dependencies>
@@ -109,7 +112,7 @@
           			<suiteXmlFiles>
             				<suiteXmlFile>src/test/resources/testNg.xml</suiteXmlFile>
           			</suiteXmlFiles>
-          			<argLine>-agentlib:TakipiAgent -Dtakipi.name=ShoppingCartJUnitTests -Dtakipi.deployment.name=v4.6</argLine>
+          			<argLine>-Xshare:off -XX:-UseTypeSpeculation -agentpath:/opt/takipi/lib/libTakipiAgent.so -Dtakipi.deployment.name=test -Dtakipi.etl</argLine>
         			</configuration>
       		</plugin>
       		

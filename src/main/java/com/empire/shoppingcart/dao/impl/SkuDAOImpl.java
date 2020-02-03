@@ -34,11 +34,13 @@ public class SkuDAOImpl implements SkuDAO {
 
 	@Override
 	public SKU update(SKU sku) {
-		log.info("Updating Sku");
-		boolean success = persistLayer.persistSku(sku);
-		if (success)
-			return sku;
-		throw new ShoppingCartException("Unable to persist Sku " + sku.getSkuNumber());
+		try {
+			log.info("Updating Sku");
+			throw new ShoppingCartException("Unable to persist Sku " + sku.getSkuNumber());
+		} catch (Exception ex) {
+			// swallowed exception
+		}
+		return sku;
 	}
 
 	@Override

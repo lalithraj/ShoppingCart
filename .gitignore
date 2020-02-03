@@ -13,5 +13,6 @@ target
 .classpath
 .project
 .settings
+.vscode/
 
 credentials.yml

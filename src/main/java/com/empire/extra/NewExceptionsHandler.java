@@ -13,7 +13,9 @@ public class NewExceptionsHandler {
 	public static final Logger log = LoggerFactory.getLogger(NewExceptionsHandler.class);
 	private static final DateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
 
-
+        private boolean ripe123;
+        private static String FRESH;
+	
 	private static NewExceptions newExceptions = new NewExceptions();
 
 	public void createNewExcpetions() {

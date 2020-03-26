@@ -36,4 +36,7 @@ public class MainTesting {
 		}
 
 	}
+	
+	private boolean Ripe;  // Noncompliant
+        private static Color FLESH; // Noncompliant
 }

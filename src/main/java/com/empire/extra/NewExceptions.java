@@ -63,4 +63,12 @@ public class NewExceptions {
 	    log.info("Message is: {}", message);
 	    throw exceptionType.getConstructor(String.class).newInstance(message);
 	}
+
+	public int returnInteger(int a) {
+            int b = 12;
+            if (a == 1) {
+               return b;
+            }
+        return b;
+        }
 }

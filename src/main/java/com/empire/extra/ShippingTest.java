@@ -13,6 +13,8 @@ import com.empire.shoppingcart.util.ExceptionListReader;
 public class ShippingTest {
 
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
+	private boolean Ripe;  // Noncompliant
+        private static Color FLESH; // Noncompliant
 	
 	@SuppressWarnings("unchecked")
 	public void processShipment(String customerNumber, String orderNumber, String shipmentDetails, String shipNumber) {	
